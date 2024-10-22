@@ -1,9 +1,16 @@
-const d = new Date();
-let hour = d.getHours();
+const age = 30;
 
-if(hour<12){
-    console.log('It is morning.')
-} else if(hour < 17) {
-    console.log('It is Afternoon')
-} else {
-    console.log('it is night time')
+if(true) {
+    const age= 40;
+ const name = 'shaun';
+ console.log('inside 2nd code block: ', age);
+
+
+
+if(true) {
+    const age= 50;
+ console.log('inside 2nd code block: ', age);
+
+}
+}
+ console.log ('outside code block: ' , age, name, test);
