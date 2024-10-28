@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .greeting {
+    text-align: center;
+  }
+  
+  .time-image {
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+  
+  /* Morning background */
+  .morning-bg {
+    background: linear-gradient(to bottom, #FFDDC1, #FF9A8B);
+  }
+  
+  /* Afternoon background */
+  .afternoon-bg {
+    background: linear-gradient(to bottom, #FFDDC1, #FFD700);
+  }
+  
+  /* Night background */
+  .night-bg {
+    background: linear-gradient(to bottom, #2C5364, #203A43, #0F2027);
+  }
