@@ -2,9 +2,7 @@
 const d = new Date();
 // Store the value of getHours in variable
 let hour = d.getHours();
-hour = 23
-// console.log(hour);
-// Create greeting variable
+
 let greetingText = document.getElementById("greeting-text");
 
 if (hour < 12) {
