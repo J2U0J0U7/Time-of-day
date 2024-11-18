@@ -1,23 +1,37 @@
-
-// Get the current hour
+// Create new Date object
 const d = new Date();
-let hour = d.getHours();
+// Store the value of getHours in variable
+let hour = 2
+
+
+//Event Listeners
+let morningBtn = document.getElementsByClassName('btn')[0];
+let AfternoonBtn = document.getElementsByClassName('btn')[1];
+let NightBtn = document.getElementsByClassName('btn')[2];
+morningBtn.addEventListener('click', setHour);
+
+function setHour(){
+  hour = ???;
+}
+
 let greetingText = document.getElementById("greeting-text");
-let timeImage = document.getElementById("time-image");
 
 if (hour < 12) {
-    // Morning
-    greetingText.textContent = "Good Morning!";
-    timeImage.src = "https://images.pexels.com/photos/209807/pexels-photo-209807.jpeg?cs=srgb&dl=pexels-pixabay-209807.jpg&fm=jpg";
-    document.body.classList.add("morning-bg");
+  // if hour is less than 12pm
+  greetingText.textContent = "Good Morning!";
+  document.querySelector(".night").classList.add("d-none");
+  document.querySelector(".afternoon").classList.add("d-none");
 } else if (hour < 17) {
-    // Afternoon
-    greetingText.textContent = "Good Afternoon!";
-    timeImage.src = "https://plus.unsplash.com/premium_photo-1678559034015-a487448e473b?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YWZ0ZXJub29ufGVufDB8fDB8fHww";
-    document.body.classList.add("afternoon-bg");
-} else {
-    // Night
-    greetingText.textContent = "Good Night!";
-    timeImage.src = "https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2018/06/Nighttime-photography-02.jpg?fit=1500%2C1061&ssl=1";
-    document.body.classList.add("night-bg");
+  // if hour is less than 17:00 (but greater than 12pm)
+  greetingText.textContent = "Good Afternoon!";
+  document.getElementsByTagName("body")[0].classList.add("noon-bg");
+  greetingText.parentElement.classList.add("noon-gradient");
+  document.querySelector(".morning").classList.add("d-none");
+  document.querySelector(".night").classList.add("d-none");
+} // hour is greater than 17:00
+else {
+  greetingText.textContent = "Good Night!";
+  greetingText.parentElement.classList.add("night-gradient");
+  document.querySelector(".morning").classList.add("d-none");
+  document.querySelector(".afternoon").classList.add("d-none");
 }
