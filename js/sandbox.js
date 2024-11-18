@@ -1,19 +1,6 @@
 // Create new Date object
 const d = new Date();
-// Store the value of getHours in variable
-let hour = 2
-
-
-//Event Listeners
-let morningBtn = document.getElementsByClassName('btn')[0];
-let AfternoonBtn = document.getElementsByClassName('btn')[1];
-let NightBtn = document.getElementsByClassName('btn')[2];
-morningBtn.addEventListener('click', setHour);
-
-function setHour(){
-  hour = ???;
-}
-
+let hour = d.getHours();
 let greetingText = document.getElementById("greeting-text");
 
 if (hour < 12) {
